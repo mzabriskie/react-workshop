@@ -77,13 +77,7 @@ const container = document.getElementById('container');
  *  "Hello Jane Doe!" (assuming first name is Jane and last name is Doe).
  */
 
-let SayHello = (props) => {
-  return (
-    <div>Hello {props.firstName} {props.lastName}!</div>
-  );
-};
-
-ReactDOM.render(<SayHello firstName="Jane" lastName="Doe"/>, container);
+// TODO Your solution here
 
 /**
  * Often you will want to validate that properties that are provided to your
@@ -130,21 +124,4 @@ ReactDOM.render(<SayHello firstName="Jane" lastName="Doe"/>, container);
  *  "Hello firstName lastName!".
  */
 
-let ValidateHello = (props) => {
-  return (
-    <div>Hello {props.user.firstName} {props.user.lastName}</div>
-  );
-};
-
-ValidateHello.defaultProps = {
-  user: {}
-};
-
-ValidateHello.propTypes = {
-  user: PropTypes.shape({
-    firstName: PropTypes.string,
-    lastName: PropTypes.string
-  })
-};
-
-ReactDOM.render(<ValidateHello user={{firstName: 'Jane', lastName: 'Doe'}}/>, container);
+// TODO Your solution here

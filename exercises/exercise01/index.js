@@ -44,10 +44,7 @@ import ReactDOM from 'react-dom';
  *  text "Hello World".
  */
 
-ReactDOM.render(
-  React.createElement('div', null, 'Hello World'),
-  document.getElementById('container')
-);
+// TODO Your solution here
 
 /**
  * React offers a markup extension to make building declarative UIs more
@@ -76,4 +73,4 @@ ReactDOM.render(
  *  Refactor your previous solution to use JSX.
  */
 
-ReactDOM.render(<div>Hello World!</div>, document.getElementById('container'));
+// TODO Your solution here

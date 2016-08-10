@@ -52,17 +52,4 @@ const container = document.getElementById('container');
  *  It should also use whatever inline styles are provided.
  */
 
-let Box = (props) => {
-  return (
-    <div className={`Box Box--${props.size}`} style={props.style}>
-      {props.children}
-    </div>
-  );
-};
-
-Box.propTypes = {
-  size: PropTypes.string,
-  style: PropTypes.object
-};
-
-ReactDOM.render(<Box size="large" style={{backgroundColor: '#e8117f'}}/>, container);
+// TODO Your solution here
