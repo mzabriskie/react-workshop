@@ -68,11 +68,11 @@ class StopWatch extends Component {
 
     this.state = {
       running: false,
-      timer: null,
       lapse: 0,
       now: 0
     };
 
+    this.timer = null;
     this.handleRunClick = this.handleRunClick.bind(this);
     this.handleClearClick = this.handleClearClick.bind(this);
   }
@@ -94,7 +94,7 @@ class StopWatch extends Component {
   }
 
   start() {
-    let timer = setInterval(() => {
+    this.timer = setInterval(() => {
       this.setState({
         lapse: Date.now() - this.state.now
       });
@@ -102,17 +102,16 @@ class StopWatch extends Component {
 
     this.setState({
       running: true,
-      timer,
       now: Date.now() - this.state.lapse
     });
   }
 
   stop() {
-    clearInterval(this.state.timer);
+    clearInterval(this.timer);
+    this.timer = null;
 
     this.setState({
-      running: false,
-      timer: null
+      running: false
     });
   }
 
