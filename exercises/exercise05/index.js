@@ -97,7 +97,7 @@ class StopWatch extends Component {
     this.timer = setInterval(() => {
       this.setState({
         lapse: Date.now() - this.state.now
-      });
+      }, 1);
     });
 
     this.setState({
